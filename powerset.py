@@ -1,9 +1,10 @@
 """ Subsets possible from a list
 """
 def power_set(numbers):
-    if not numbers: return [[]]
-
     sets = [[]]
+
+    if not numbers: return sets
+
     sets += [numbers]
 
     for i, number in enumerate(numbers):
