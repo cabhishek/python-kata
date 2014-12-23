@@ -7,8 +7,7 @@ any other data structure (like array). The stack support the following operation
 
 def sort_stack(stack):
 
-    def peek(stack):
-        return stack[-1:][0]
+    def peek(stack): return stack[-1]
 
     sorted_stack = []
 
@@ -26,4 +25,4 @@ def sort_stack(stack):
     return sorted_stack
 
 
-print sort_stack([7, 73, 65, 23, 8])
+print sort_stack([7, 73, 65, 23, 8, 77, 1, 24])
