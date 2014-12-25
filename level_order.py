@@ -56,4 +56,4 @@ tree.insert(6)
 tree.insert(2)
 tree.insert(9)
 
-print[node for node in tree.level_order()]
+print [node for node in tree.level_order()]

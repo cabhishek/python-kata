@@ -35,6 +35,47 @@ def depth_first(graph, start, end):
 
     return None
 
+# All possible paths from start to end
+def all_paths(graph, start, end, path=[]):
+
+    # Creates a new list so input path is not affected
+    path = path + [start]
+
+    if start not in graph: return None
+
+    if start == end: return [path]
+    paths = []
+
+    for node in graph[start]:
+
+        if node not in path:
+            new_paths = all_paths(graph, node, end, path)
+
+            for newpath in new_paths:
+                paths.append(newpath)
+
+    return paths
+
+def shortest_path(graph, start, end, path=[]):
+
+    path = path + [start]
+
+    if start not in graph: return None
+
+    if start == end: return path
+
+    shortest = []
+
+    for node in graph[start]:
+
+        if node not in path:
+            new_path = shortest_path(graph, node, end, path)
+
+            if not shortest or len(new_path) < len(shortest):
+                shortest = new_path
+
+    return shortest
+
 graph = {'A': ['B', 'C'],
          'B': ['C', 'D'],
          'C': ['D'],
@@ -45,3 +86,5 @@ graph = {'A': ['B', 'C'],
 
 print depth_first(graph, 'A', 'D')
 print find_path(graph, 'A', 'D')
+print all_paths(graph, 'A', 'D')
+print shortest_path(graph, 'A', 'D')
