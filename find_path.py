@@ -1,3 +1,6 @@
+""" a.k.a Depth first search
+"""
+# Recursive
 def find_path(graph, start, end, path=[]):
 
     if start not in graph: return None
@@ -14,6 +17,24 @@ def find_path(graph, start, end, path=[]):
 
     return None
 
+# Non recursive
+def depth_first(graph, start, end):
+
+    stack = [start]
+    path = [start]
+
+    while stack:
+        node = stack.pop()
+
+        if node == end: return path
+
+        for vertex in graph[node]:
+            if vertex not in path:
+                path.append(vertex)
+                stack.append(vertex)
+
+    return None
+
 graph = {'A': ['B', 'C'],
          'B': ['C', 'D'],
          'C': ['D'],
@@ -22,4 +43,5 @@ graph = {'A': ['B', 'C'],
          'F': ['C']
         }
 
-print find_path(graph, 'A', 'C')
+print depth_first(graph, 'A', 'D')
+print find_path(graph, 'A', 'D')
