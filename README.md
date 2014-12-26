@@ -1,4 +1,4 @@
-python-kata
+Python Kata
 ===========
 
-Python + Problems
+Simple problems to practice python syntax and CS101
