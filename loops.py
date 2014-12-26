@@ -1,6 +1,6 @@
 def loop(intervals):
 
-    print 'Basic pythonic loop'
+    print 'Basic'
     for interval in intervals:
         print interval
 
@@ -30,9 +30,12 @@ def loop(intervals):
     for interval in intervals[::-1]:
         print interval
 
-    print 'Loop with flexible step interval'
+    print 'Loops with flexible step interval'
     for interval in intervals[::2]:
         print interval
 
+    print 'Iterate Curr and next element'
+    for (curr, next) in zip(intervals, intervals[1:]):
+        print curr, next
 
 loop([[1,3],[2,6],[8,10],[9,18],[19,23]])
