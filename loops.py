@@ -30,6 +30,10 @@ def loop(array):
     for number in array[::-1]:
         print number
 
+    print 'Backward loop with index'
+    for i in range(len(array)-1, -1,-1):
+        print array[i]
+
     print 'Loops with flexible step number'
     for number in array[::2]:
         print number
