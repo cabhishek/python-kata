@@ -1,4 +1,4 @@
 Python Kata
 ===========
 
-Simple problems to practice python syntax and CS101
+Learn python via simple problems.

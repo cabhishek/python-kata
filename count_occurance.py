@@ -24,7 +24,7 @@ def binary_search(array, number, search_first):
 
 a = [1, 1, 3, 3, 5, 5, 5, 5, 5, 9, 9, 11]
 
-first = binary_search(a, 1, True)
-last = binary_search(a, 1, False)
+first = binary_search(a, 1, search_first=True)
+last = binary_search(a, 1, search_first=False)
 
 print (last - first) + 1 if first or last else 0
