@@ -4,7 +4,6 @@ class Node(object):
         self.data = data
         self.next = None
 
-
 class LinkedList(object):
 
     def __init__(self):
@@ -29,15 +28,15 @@ class LinkedList(object):
                 else:
                     break
 
-            # Append new smallest number
             # if not curr:
             #     curr = node
             #     prev.next = curr
+            # If two elements or swap second with first
             if not prev:
                 node.next = self.list
                 self.list = node
             else:
-                # print 'curr ->', curr
+                # General case
                 node.next = curr
                 prev.next = node
                 prev = node
