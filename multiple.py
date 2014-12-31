@@ -19,7 +19,7 @@ def multiply(array):
     previous = 1
 
     for i in range(0, len(array)):
-        if i: previous *= array[i-1]
+        if i: previous = reduce(mul, array[:i])
 
         products.append(reduce(mul, array[i+1:], previous))
 
