@@ -16,10 +16,9 @@ from operator import mul
 def multiply(array):
 
     products = []
-    previous = 1
 
     for i in range(0, len(array)):
-        if i: previous = reduce(mul, array[:i])
+        previous = reduce(mul, array[:i]) if i else 1
 
         products.append(reduce(mul, array[i+1:], previous))
 
