@@ -1,35 +1,33 @@
 """
 Given an array and an integer, find the smallest subarray whose sum is greater than the given integer.
 """
-def min_length_subarray(array, x):
+def min_length_subarray(A, x):
 
-    start = 0
-    ansEnd = 0
-    ansStart = 0
-    currSum = 0
-    minLen = len(array)
+    start, end = 0, 0
+    min_length = len(A)
+    curr_sum = 0
 
-    i = 0
+    for i in range(len(A)):
 
-    while True:
-        while currSum > x:
-            currSum = currSum - array[start]
+        curr_sum += A[i]
 
-            if i - start < minLen:
-                minLen = i - start
-                ansEnd = i
-                ansStart = start
+        while curr_sum > x:
 
-            start += 1
+            #After subtract if sum is still greater
+            #and min length condition is still met
+            if curr_sum - A[start] > x and \
+                    (i-start) < min_length:
 
-        if i < len(array):
-            currSum += array[i]
-        else:
-            break
+                curr_sum -= A[start]
 
-        i += 1
+                #new limits
+                min_length = (i - start) + 1
+                start += 1
+                end = i
+            else:
+                break
 
-    return array[ansStart:ansEnd]
+    return A[start:end+1]
 
 # A = [1, 5, 20, 70, 8]  #97
 A = [1, 10, 3, 40, 18]  # 50
