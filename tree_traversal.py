@@ -35,7 +35,6 @@ class Tree(object):
         return self.root
 
     def pre_order(self):
-        """ Same as level order"""
         queue = []
 
         def _rec_pre_order(node):
@@ -61,6 +60,21 @@ class Tree(object):
 
         return _rec_in_order(self.root)
 
+    def post_order(self):
+        queue = []
+
+        def _rec_post_order(node):
+            if not node: return
+
+            _rec_post_order(node.left)
+            _rec_post_order(node.right)
+
+            queue.append(node.data)
+
+            return queue
+
+        return _rec_post_order(self.root)
+
     def level_order(self):
         queue = deque([self.root])
 
@@ -83,7 +97,7 @@ tree.insert(6)
 tree.insert(2)
 tree.insert(9)
 
-print [node for node in tree.level_order()]
-
-print tree.in_order()
-print tree.pre_order()
+print "Level order ->", [node for node in tree.level_order()]
+print "Pre order ->", tree.pre_order()
+print "Inorder (sorted) ->", tree.in_order()
+print "Post order->", tree.post_order()
