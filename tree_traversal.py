@@ -35,6 +35,7 @@ class Tree(object):
         return self.root
 
     def pre_order(self):
+        """ a.k.a DFS (depth first search) """
         queue = []
 
         def _rec_pre_order(node):
@@ -76,6 +77,7 @@ class Tree(object):
         return _rec_post_order(self.root)
 
     def level_order(self):
+        """ a.k.a BFS (breadth first search) """
         queue = deque([self.root])
 
         while queue:
