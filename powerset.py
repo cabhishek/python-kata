@@ -1,21 +1,7 @@
 """ Subsets possible from a list
 """
-#def power_set(numbers):
-    #sets = [[]]
 
-    #if not numbers: return sets
-
-    #sets += [numbers]
-
-    #for i, number in enumerate(numbers):
-        #sets.append([number])
-
-        #for x in numbers[i+1:]:
-            #sets.append([number] + [x])
-
-    #return sets
-
-def powerset(lst):
+def powerset_2(lst):
     # the power set of the empty set has one element, the empty set
     result = [[]]
     for x in lst:
@@ -28,5 +14,31 @@ def powerset(lst):
         result.extend([subset + [x] for subset in result])
     return result
 
-print powerset([1,2,3,4])
+sets  = powerset_2(['a', 'b', 'c', 'd'])
+print "Total sets ->", len(sets)
+for set in sets:
+    print set
 
+def powerset(data):
+    sets = [[]]
+    idx = 1
+
+    for x in data:
+        new_sets = [[x]]
+
+        for y in data[idx:]:
+            # new set combinations
+            new_sets += [set + [y] for set in new_sets]
+
+        sets.extend(new_sets)
+
+        idx += 1
+
+    return sets
+
+sets  = powerset(['a', 'b', 'c', 'd'])
+
+print "Total sets ->", len(sets)
+
+for set in sets:
+    print set
