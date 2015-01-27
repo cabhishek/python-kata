@@ -90,6 +90,14 @@ class Tree(object):
 
             yield node.data
 
+    def size(self):
+        def count(node):
+            if not node: return 0
+
+            return 1 + count(node.left) + count(node.right)
+
+        return count(self.root)
+
 tree = Tree()
 tree.insert(5)
 tree.insert(4)
@@ -103,3 +111,4 @@ print "Level order ->", [node for node in tree.level_order()]
 print "Pre order ->", tree.pre_order()
 print "Inorder (sorted) ->", tree.in_order()
 print "Post order->", tree.post_order()
+print "Size ->", tree.size()
