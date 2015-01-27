@@ -98,6 +98,25 @@ class Tree(object):
 
         return count(self.root)
 
+    def max_depth(self):
+
+        paths = []
+
+        def all_paths(node, path=[]):
+            if not node: return
+
+            path = path + [node.data]
+
+            if not node.left and not node.right:
+                paths.append(path)
+
+            all_paths(node.left, path)
+            all_paths(node.right, path)
+
+        all_paths(self.root)
+
+        return len(max(paths, key=len))
+
 tree = Tree()
 tree.insert(5)
 tree.insert(4)
@@ -112,3 +131,4 @@ print "Pre order ->", tree.pre_order()
 print "Inorder (sorted) ->", tree.in_order()
 print "Post order->", tree.post_order()
 print "Size ->", tree.size()
+print "Max depth ->", tree.max_depth()
