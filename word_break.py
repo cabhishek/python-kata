@@ -54,4 +54,6 @@ def word_break_3(string, dict):
         if prefix in dict:
             return [prefix] + word_break_3(string[i:], dict)
 
+    return []
+
 print " ".join(word_break_3(string, dict))
