@@ -8,7 +8,7 @@ dict = ["leet", "code"].
 Return true because "leetcode" can be segmented as "leet code".
 """
 
-def word_break(word, dict):
+def word_break_2(word, dict):
 
     for i in range(len(word)):
         first  = word[:i]
@@ -19,4 +19,25 @@ def word_break(word, dict):
 
     return False
 
-print word_break("leetcode", ["leet", "code"])
+print word_break_2("leetcode", ["leet", "code"])
+
+# More general case.
+def word_break(string, dict):
+    words = []
+
+    def find_words(string):
+        for i in range(len(string)+1):
+            prefix = string[:i]
+
+            if prefix in dict:
+                words.append(prefix)
+                find_words(string[i:])
+
+    find_words(string)
+
+    return " ".join(words)
+
+dict = ["leet", "code", "is", "great", "mark", "for"]
+string = "leetcodeismark"
+
+print word_break(string, dict)
