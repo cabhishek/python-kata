@@ -50,6 +50,28 @@ def reverse_3(string):
 
     return reversed + " " +  reverse(string[i:])
 
+def reverse_vowels(string, vowels):
+    start = 0
+    end  = len(string) - 1
+    string = list(string)
+
+    while end > start:
+        if string[start] in vowels and string[end] in vowels:
+            string[start],string[end] = string[end], string[start]
+            start += 1
+            end  -= 1
+
+        if string[start] not in vowels:
+            start += 1
+
+        if string[end] not in vowels:
+            end -= 1
+
+    return "".join(string)
+
 print reverse("Hello World")
 print reverse_2("Hello from Mars")
 print reverse_3("Hello world everyone")
+
+vowels = ["a", "e", "i", "o", "u"]
+print reverse_vowels("abhishek", vowels)
