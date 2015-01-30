@@ -8,7 +8,6 @@ def merge(A, B):
 
         if i >=0 and A[i] >= B[j]:
             A[free] = A[i]
-            A[i] = None # Mark empty
             free -= 1
             i -= 1
         else:
