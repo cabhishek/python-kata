@@ -67,3 +67,34 @@ def arrange(A, k):
 A = [10,12,13,14,4,5,6,7]
 
 print arrange(A,2)
+
+def arrange_in_place(A, k):
+    count = len([number for number in A if number > A[k]])
+    pos = len(A) - count - 1
+
+    # swap
+    A[pos], A[k] = A[k],A[pos]
+
+    i = 0
+    j = len(A)-1
+
+    while i < pos and j > pos:
+
+        if A[i] > A[pos] and A[j] < A[pos]:
+            #swap
+            A[i],A[j] = A[j], A[i]
+
+        if A[i] < A[pos]:
+            i += 1
+
+        if A[j] > A[pos]:
+            j -=1
+
+    return A
+
+
+
+A = [4,8,2,12,18,4,1]
+# A = [10,12,13,14,4,5,6,7]
+
+print arrange_in_place(A,3)
