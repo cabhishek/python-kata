@@ -117,6 +117,22 @@ class Tree(object):
 
         return len(max(paths, key=len))
 
+    def is_balanced(self):
+
+        def height(node):
+
+            if not node: return (True, 0)
+
+            left_height = height(node.left)
+            right_height = height(node.right)
+
+            _is_balanced = abs(right_height[1] - left_height[1]) <= 1
+            tree_height = max(left_height[1], right_height[1]) + 1
+
+            return (_is_balanced, tree_height)
+
+        return height(self.root)[0]
+
 tree = Tree()
 tree.insert(5)
 tree.insert(4)
@@ -132,3 +148,4 @@ print "Inorder (sorted) ->", tree.in_order()
 print "Post order->", tree.post_order()
 print "Size ->", tree.size()
 print "Max depth ->", tree.max_depth()
+print "Is balanced ->", tree.is_balanced()
