@@ -69,7 +69,6 @@ q.append(15)
 print q
 
 print [data for data in q]
-
 print q.popleft()
 print q.popleft()
 print q.popleft()
