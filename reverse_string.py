@@ -75,3 +75,32 @@ print reverse_3("Hello world everyone")
 
 vowels = ["a", "e", "i", "o", "u"]
 print reverse_vowels("abhishek", vowels)
+
+
+def compress(string):
+
+    # initialize
+    compressed = string[0]
+    count = 1
+
+    for i in range(1, len(string)):
+        if string[i] == string[i-1]:
+            count += 1
+        else:
+            # append count
+            compressed += str(count)
+            # append next char
+            compressed += string[i]
+            # reset count
+            count = 1
+    else:
+        # last char count value
+        compressed += str(count)
+
+    return min([compressed, string], key=len)
+
+# string = "aabbbccc"
+# string = "abb"
+string = "abccccccccccccccccccccccccccccccdefg"
+
+print compress(string)
