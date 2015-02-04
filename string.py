@@ -79,6 +79,8 @@ print reverse_vowels("abhishek", vowels)
 
 def compress(string):
 
+    if not string: return None
+
     # initialize
     compressed = string[0]
     count = 1
