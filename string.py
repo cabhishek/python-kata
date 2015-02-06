@@ -99,7 +99,7 @@ def compress(string):
         # last char count value
         compressed += str(count)
 
-    return min([compressed, string], key=len)
+    return min(compressed, string, key=len)
 
 # string = "aabbbccc"
 # string = "abb"
