@@ -106,3 +106,32 @@ def compress(string):
 string = "abccccccccccccccccccccccccccccccdefg"
 
 print compress(string)
+
+
+def permute(string):
+
+    if not string: return None
+    if len(string) == 1: return string
+
+    k = len(string) - 1
+    prefix, last_char = string[:k], string[k:]
+
+    def rec_permute(string, char):
+
+        if not string: return [char]
+
+        j = len(string) - 1
+        sub = rec_permute(string[:j], string[j:])
+
+        premutations = [str[i:] + char + str[:i]
+                            for str in sub
+                                for i in range(len(str)+1)]
+
+        return premutations
+
+
+    return rec_permute(prefix, last_char)
+
+input = 'ABC'
+print "Total premutations =>", len(permute(input))
+print permute(input)
