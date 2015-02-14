@@ -27,4 +27,4 @@ def count_occurance(number, array):
 
     return (last - first) + 1 if first or last else 0
 
-print count_occurance(3, [1, 1, 3, 3, 5, 5, 5, 5, 5, 9, 9, 11])
+print(count_occurance(3, [1, 1, 3, 3, 5, 5, 5, 5, 5, 9, 9, 11]))

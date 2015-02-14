@@ -63,4 +63,4 @@ list.insert(2)
 list.insert(7)
 list.insert(1)
 
-print list
+print(list)

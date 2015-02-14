@@ -19,4 +19,4 @@ matrix = [
             [32, 33, 39, 50],
         ];
 
-print matrix_search(37, matrix)
+print(matrix_search(37, matrix))

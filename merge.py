@@ -23,7 +23,7 @@ B = [4,11,18]
 # B = [15,16,17]
 # B = [0,1,2]
 
-print merge(A, B)
+print(merge(A, B))
 
 def arrange(A, k):
     # All elments less than A[K] before and greater after A[K]
@@ -66,7 +66,7 @@ def arrange(A, k):
 # A = [4,8,2,12,18,4,1]
 A = [10,12,13,14,4,5,6,7]
 
-print arrange(A,2)
+print(arrange(A,2))
 
 def arrange_in_place(A, k):
     count = len([number for number in A if number > A[k]])
@@ -97,4 +97,4 @@ def arrange_in_place(A, k):
 A = [4,8,2,12,18,4,1]
 # A = [10,12,13,14,4,5,6,7]
 
-print arrange_in_place(A,3)
+print(arrange_in_place(A,3))

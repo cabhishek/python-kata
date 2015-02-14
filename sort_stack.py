@@ -25,7 +25,7 @@ def sort_stack(stack):
     return sorted_stack
 
 
-print sort_stack([7, 73, 65, 23, 8, 77, 1, 24])
+print(sort_stack([7, 73, 65, 23, 8, 77, 1, 24]))
 
 
 def sort(A):
@@ -57,5 +57,5 @@ def sort(A):
 
 A = [1,2,3,6,5,4]
 
-print sort(A)
+print(sort(A))
 

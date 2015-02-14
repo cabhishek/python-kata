@@ -15,9 +15,9 @@ def powerset_2(lst):
     return result
 
 sets  = powerset_2(['a', 'b', 'c', 'd'])
-print "Total sets ->", len(sets)
+print("Total sets ->", len(sets))
 for set in sets:
-    print set
+    print(set)
 
 def powerset(data):
     sets = [[]]
@@ -38,7 +38,7 @@ def powerset(data):
 
 sets  = powerset(['a', 'b', 'c', 'd'])
 
-print "Total sets ->", len(sets)
+print("Total sets ->", len(sets))
 
 for set in sets:
-    print set
+    print(set)

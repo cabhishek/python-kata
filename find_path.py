@@ -84,7 +84,7 @@ graph = {'A': ['B', 'C'],
          'F': ['C']
         }
 
-print depth_first(graph, 'A', 'D')
-print find_path(graph, 'A', 'D')
-print all_paths(graph, 'A', 'D')
-print shortest_path(graph, 'A', 'D')
+print(depth_first(graph, 'A', 'D'))
+print(find_path(graph, 'A', 'D'))
+print(all_paths(graph, 'A', 'D'))
+print(shortest_path(graph, 'A', 'D'))

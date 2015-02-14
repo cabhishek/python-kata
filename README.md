@@ -1,6 +1,6 @@
-Python Kata
+Python (3.x) Kata
 ===========
 
-Learn python via simple problems.
+Learn python 3 via simple problems.
 
 * To see output simply do ``` python <file_name.py>```

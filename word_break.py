@@ -19,7 +19,7 @@ def word_break_2(word, dict):
 
     return False
 
-print word_break_2("leetcode", ["leet", "code"])
+print(word_break_2("leetcode", ["leet", "code"]))
 
 
 dict = ["leet", "code", "is", "great", "mark", "for"]
@@ -41,7 +41,7 @@ def word_break(string, dict):
 
     return " ".join(words)
 
-print word_break(string, dict)
+print(word_break(string, dict))
 
 # without closure
 def word_break_3(string, dict):
@@ -56,4 +56,4 @@ def word_break_3(string, dict):
 
     return []
 
-print " ".join(word_break_3(string, dict))
+print(" ".join(word_break_3(string, dict)))

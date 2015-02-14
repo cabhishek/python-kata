@@ -17,4 +17,4 @@ def delete_from_array(number, array):
     return array
 
 
-print delete_from_array(3, [5,3,7,11,2,3,13,5,7,3,9,8])
+print(delete_from_array(3, [5,3,7,11,2,3,13,5,7,3,9,8]))

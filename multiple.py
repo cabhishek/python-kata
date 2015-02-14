@@ -12,6 +12,7 @@ by calculating:
 Do not use division in your solution.
 """
 from operator import mul
+from functools import reduce
 
 def multiply(array):
 
@@ -24,4 +25,4 @@ def multiply(array):
 
     return products
 
-print multiply([1, 7, 3, 4])
+print(multiply([1, 7, 3, 4]))

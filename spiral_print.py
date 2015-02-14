@@ -76,4 +76,4 @@ matrix = [[2,4,6,8],
 
 # matrix = []
 
-print [data for data in spiral_traverse(matrix)]
+print([data for data in spiral_traverse(matrix)])

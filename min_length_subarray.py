@@ -34,4 +34,4 @@ A = [1, 10, 3, 40, 18]  # 50
 
 # A = [1, 4, 45, 6, 0, 19] #51
 
-print min_length_subarray(A, 50)
+print(min_length_subarray(A, 50))

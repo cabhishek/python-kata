@@ -25,4 +25,4 @@ def smallest_integer(array):
 
     return smallest_int
 
-print smallest_integer([1,2,6,7,9])
+print(smallest_integer([1,2,6,7,9]))

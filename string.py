@@ -69,12 +69,12 @@ def reverse_vowels(string, vowels):
 
     return "".join(string)
 
-print reverse("Hello World")
-print reverse_2("Hello from Mars")
-print reverse_3("Hello world everyone")
+print((reverse("Hello World")))
+print((reverse_2("Hello from Mars")))
+print((reverse_3("Hello world everyone")))
 
 vowels = ["a", "e", "i", "o", "u"]
-print reverse_vowels("abhishek", vowels)
+print((reverse_vowels("abhishek", vowels)))
 
 
 def compress(string):
@@ -105,7 +105,7 @@ def compress(string):
 # string = "abb"
 string = "abccccccccccccccccccccccccccccccdefg"
 
-print compress(string)
+print((compress(string)))
 
 
 def permute(string):
@@ -133,5 +133,5 @@ def permute(string):
     return rec_permute(prefix, last_char)
 
 input = 'ABC'
-print "Total premutations =>", len(permute(input))
-print permute(input)
+print(("Total premutations =>", len(permute(input))))
+print((permute(input)))

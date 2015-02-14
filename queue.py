@@ -66,10 +66,10 @@ q.append(8)
 q.append(9)
 q.append(15)
 
-print q
+print(q)
 
-print [data for data in q]
-print q.popleft()
-print q.popleft()
-print q.popleft()
-print q.popleft()
+print([data for data in q])
+print(q.popleft())
+print(q.popleft())
+print(q.popleft())
+print(q.popleft())

@@ -8,13 +8,13 @@ def paths(matrix, row, column, path):
     if row == len(matrix)-1:
         for j in range(column, len(matrix)):
             path += str(matrix[row][j])
-        print path
+        print(path)
         return
 
     if column == len(matrix)-1:
         for i in range(row, len(matrix)):
             path += str(matrix[i][column])
-        print path
+        print(path)
         return
 
     path += str(matrix[row][column])

@@ -13,12 +13,12 @@ Above step is repeated till no sticks are left.
 def cut_sticks(sticks):
 
     while sticks:
-        print "Sticks to cut ->", len(sticks)
+        print("Sticks to cut ->", len(sticks))
 
         cut_size = min(sticks)
 
-        sticks = filter(lambda x:x,
-                        map(lambda x: x-cut_size, sticks))
-
+        sticks = [x for x in [x-cut_size for x in sticks] if x]
+        # sticks = filter(lambda x:x,
+        #                 map(lambda x: x-cut_size, sticks))
 
 cut_sticks([1,2,3,4,3,3,2,1])

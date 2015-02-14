@@ -23,4 +23,4 @@ triangle = [
   [4,1,8,3]
 ]
 
-print min_path_sum(triangle)
+print(min_path_sum(triangle))

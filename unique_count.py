@@ -10,4 +10,4 @@ def unqiue_count(array):
 
     return count
 
-print unqiue_count([1,2,3,4,5,6,6,7])
+print(unqiue_count([1,2,3,4,5,6,6,7]))
